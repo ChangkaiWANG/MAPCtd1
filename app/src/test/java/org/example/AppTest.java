@@ -4,13 +4,32 @@
 package org.example;
 
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+import java.util.List;
+import java.util.ArrayList;
+
 import org.junit.jupiter.api.Test;
+
+
 
 public class AppTest {
     @Test public void appHasAGreeting() {
         App classUnderTest = new App();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+    }
+
+    @Test public void testMemoire(){
+        List<Chapitre> chapitres = new ArrayList<>();
+        chapitres.add(new Chapitre("Introduction", new String[]{"Page 1", "Page 2", "Page 3"}));
+        chapitres.add(new Chapitre("Patrons", new String[]{"Page 1", "Page 2", "Page 3"}));
+        chapitres.add(new Chapitre("Anti-Patrons", new String[]{"Page 1", "Page 2", "Page 3"}));
+        chapitres.add(new Chapitre("Conclusion", new String[]{"Page 1", "Page 2", "Page 3"}));
+
+
+        Memoire memoireAlice = new Memoire("Patrons et Anti-Patrons", chapitres);
+        assertNotEquals(7, memoireAlice.taille());
     }
 }
