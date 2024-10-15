@@ -12,14 +12,12 @@ public class Chapitre implements Document{
 
   @Override
   public String titre() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'titre'");
+    return titre;
   }
 
   @Override
   public int taille() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'taille'");
+    return pages.length;
   }
   
 }

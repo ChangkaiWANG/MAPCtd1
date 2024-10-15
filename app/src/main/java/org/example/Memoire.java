@@ -13,8 +13,7 @@ public class Memoire implements Document{
 
   @Override
   public String titre() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'titre'");
+    return titre;
   }
 
   @Override
