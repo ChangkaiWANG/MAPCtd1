@@ -1,4 +1,4 @@
-@!include ../commons.style
+@!include commons.style
 @startuml dc_example
 interface Document {
   + titre(): String

@@ -19,8 +19,11 @@ public class Memoire implements Document{
 
   @Override
   public int taille() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'taille'");
+    int t = 0;
+    for (Chapitre chap : chapitres){
+      t += chap.taille();
+    }
+    return t;
   }
 
   
